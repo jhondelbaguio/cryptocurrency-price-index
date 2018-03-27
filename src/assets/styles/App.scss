@@ -1,0 +1,89 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+@font-face {
+	font-family: "averta-light";
+	src: url("../fonts/averta-light-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "averta";
+	src: url("../fonts/averta-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: "averta", sans-serif;
+	font-size: 16px;
+	line-height: 1.833em;
+	color: rgb(125, 149, 182);
+}
+
+.page {
+	height: 100vh;
+	background: linear-gradient(to bottom, #004a74, #001d2e);
+}
+
+.c-card {
+	margin-top: 6em;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 4px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(218, 225, 233);
+	border-image: initial;
+
+	&__heading {
+		padding: 15px 20px;
+		//border-bottom: 1px solid rgb(218, 225, 233);
+	}
+	&__body {
+		min-height: 440px;
+		padding: 15px;
+	}
+}
+
+.loader-position {
+	position: absolute;
+	width: 0px;
+	z-index: 2000000000;
+	left: 48%;
+	top: 46%;
+}
+
+@keyframes spinner {
+	from {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+.loader-spinner {
+	margin: auto;
+
+	-webkit-animation: spinner 0.8s linear;
+	animation: spinner 0.8s linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+
+	background: transparent none repeat scroll 0 0;
+	border-color: #dddddd #dddddd #fe9206;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 2px;
+	height: 52px !important;
+	width: 52px !important;
+	z-index: 9999;
+}
+
+.crypto-icon {
+	width: 40px;
+	margin-right: 15px;
+}

@@ -17,7 +17,7 @@ clone the repository
 cd client
 yarn install or npm install
 yarn start
-
+```
 
 ### Screenshot
 
